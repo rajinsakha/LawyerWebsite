@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.container{
+ background-image: url('./assets/bg-image.jpg');
+ background-size: cover;
+ background-position: center center;
+ background-repeat: no-repeat;
+ max-width: initial;
+}
+
+.contact{
+  background-image: url('./assets/contact-bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  max-width: initial;
+}
+
+@layer utilities{
+  .padding {
+    @apply sm:px-16 lg:px-32 px-8 sm:py-24 py-12;
+  }
+}
+
+@layer components{
+  .navlinks li{
+    @apply px-2 min-[500px]:px-6 py-3 font-semibold text-white max-[385px]:text-xs uppercase cursor-pointer ;
+  }
+
+  .active, .navlinks li:hover{
+    @apply bg-slate-400;
+  }
+
+  form input{
+    @apply sm:w-96 px-4 py-1 
+  }
+
+
+}
+
+
